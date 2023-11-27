@@ -1,0 +1,32 @@
+{{>partials/header}}
+
+Olá {{name }}, como vai a vida? 
+
+
+<h2>Novo Usuário</h2>
+
+<form action="/novousuario" method="POST">
+  <div>
+    <label for="name">Nome:</label>
+    <input type="text" name="name" placeholder="Digite seu nome"/>
+  </div>
+  <br>
+  <div>
+    <label for="age">Idade:</label>
+    <input type="age" name="age" placeholder="Digite sua idade" />
+  </div>
+  <br>
+  <div class="button">
+    <button type="submit">Inserir Usuário</button>
+  </div>
+</form>
+
+
+<h2>Usuários do banco</h2>
+<ul>
+    {{#user}}
+        <li>{{name}} - Idade: {{age}}</li>
+    {{/user}}
+</ul>
+
+{{>partials/footer}}
